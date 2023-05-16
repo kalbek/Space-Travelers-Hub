@@ -66,3 +66,11 @@ nav .menus {
 .ptr {
   cursor: pointer;
 }
+
+.gap1 {
+  gap: 1rem;
+} 
+
+.menu {
+  color: #2f90ff;
+}
