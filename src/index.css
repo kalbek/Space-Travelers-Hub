@@ -66,3 +66,25 @@ nav .menus {
 .ptr {
   cursor: pointer;
 }
+
+.gap1 {
+  gap: 1rem;
+}
+
+.menu {
+  color: #2f90ff;
+}
+
+.flex-ccc {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.selected {
+  text-decoration: underline !important;
+}
+
+.blues {
+  text-decoration: none;
+}
