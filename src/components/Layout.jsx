@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import NavLink from './NavLink';
+import Navigation from './Navigation';
 
 const Layout = () => (
   <>
-    <NavLink />
+    <Navigation />
     <Outlet />
   </>
 );
