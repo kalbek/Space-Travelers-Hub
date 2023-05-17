@@ -88,3 +88,18 @@ nav .menus {
 .blues {
   text-decoration: none;
 }
+
+.missions {
+  display: flex;
+}
+
+.missionsHead,
+.missionsIndex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+  margin: 10px 10px;
+}
