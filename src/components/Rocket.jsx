@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Rocket = ({ name, description, image }) => (
+
   <div className="card">
     <div>
       <img src={image} className="image" alt="rocket" />
