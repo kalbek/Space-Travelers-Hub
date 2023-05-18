@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 const MyProfile = () => {
   const { missions } = useSelector((store) => store.missions);
+  const { rocketList } = useSelector((store) => store.rockets);
   return (
     <>
       <div className="flex-centered">
@@ -26,6 +27,17 @@ const MyProfile = () => {
           <tr>
             <th className="title-profile flex-start">My Rockets</th>
           </tr>
+          {rocketList
+            .filter((rocket) => rocket.reserved)
+            .map((rocket) => (
+              <div key={rocket.id}>
+                <tr className="flex relative">
+                  <td className="p-1 w-40 wrap profile">
+                    <p>{rocket.name}</p>
+                  </td>
+                </tr>
+              </div>
+            ))}
         </table>
       </div>
     </>
