@@ -40,6 +40,11 @@ code {
   display: flex;
 }
 
+.flex-centered {
+  display: flex;
+  justify-content: center;
+}
+
 .logo {
   content: url("./assets/images/planet.png");
 }
