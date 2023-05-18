@@ -32,7 +32,7 @@ const Mission = () => {
               <td className="p-1 w-70 wrap">{mission.description}</td>
               <td className="p-1 w-10 wrap">
                 <button type="button" className="btn-not-member ptr">
-                  <p>{!mission.member ? 'NOT A MEMBER' : 'Active Member'}</p>
+                  <p>NOT A MEMBER</p>
                 </button>
               </td>
               <td className="p-1 w-10 wrap">
