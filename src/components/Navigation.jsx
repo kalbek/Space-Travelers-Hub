@@ -12,14 +12,14 @@ const Navigation = () => (
           <div className="menus flex gap1">
             <NavLink
               to="/rockets"
-              activeClassName="selected"
+              activeclassname="selected"
               style={{ textDecoration: 'none' }}
             >
               <div className="menu ptr">Rockets</div>
             </NavLink>
             <NavLink
               to="/missions"
-              activeClassName="selected"
+              activeclassname="selected"
               style={{ textDecoration: 'none' }}
             >
               <div className="menu ptr">Missions</div>
@@ -27,7 +27,7 @@ const Navigation = () => (
             |
             <NavLink
               to="/profile"
-              activeClassName="selected"
+              activeclassname="selected"
               style={{ textDecoration: 'none' }}
             >
               <div className="menu ptr">My Profile</div>
