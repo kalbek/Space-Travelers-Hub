@@ -5,10 +5,13 @@ const initialState = {
   toFetch: 'true',
 };
 
-export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
-  const response = await fetch('https://api.spacexdata.com/v3/rockets');
-  return response.json();
-});
+export const fetchRockets = createAsyncThunk(
+  'rockets/fetchRockets',
+  async () => {
+    const response = await fetch('https://api.spacexdata.com/v3/rockets');
+    return response.json();
+  },
+);
 
 const rocketsSlice = createSlice({
   name: 'rockets',
