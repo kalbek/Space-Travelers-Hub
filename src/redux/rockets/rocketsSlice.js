@@ -1,38 +1,53 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+const url = 'https://api.spacexdata.com/v3/rockets';
+
+export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
 
 const initialState = {
   rocketList: [],
-  toFetch: 'true',
+  status: 'idle',
+  error: null,
 };
 
-export const fetchRockets = createAsyncThunk(
-  'rockets/fetchRockets',
-  async () => {
-    const response = await fetch('https://api.spacexdata.com/v3/rockets');
-    return response.json();
-  },
-);
-
-const rocketsSlice = createSlice({
+export const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {},
   extraReducers(builder) {
-    builder.addCase(fetchRockets.fulfilled, (state, action) => {
-      const newState = { ...state };
-      const rocketsCard = [];
-      action.payload.forEach((rockCard) => {
-        rocketsCard.push({
-          id: rockCard.rocket_id,
-          name: rockCard.rocket_name,
-          description: rockCard.description,
-          image: rockCard.flickr_images,
+    builder
+      .addCase(fetchRockets.pending, (state) => ({
+        ...state,
+        status: 'loading',
+      }))
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        const newState = { ...state };
+        const newArray = [];
+        action.payload.forEach((key) => {
+          newArray.push({
+            id: key.rocket_id,
+            name: key.rocket_name,
+            description: key.description,
+            image: key.flickr_images,
+          });
         });
-      });
-      newState.rocketList = rocketsCard;
-      newState.toFetch = false;
-      return newState;
-    });
+        newState.rocketList = [...newArray];
+        newState.status = 'loaded';
+        return newState;
+      })
+      .addCase(fetchRockets.rejected, (state, action) => ({
+        ...state,
+        status: 'failed',
+        error: [...state.error, action.error.message],
+      }));
   },
 });
 
