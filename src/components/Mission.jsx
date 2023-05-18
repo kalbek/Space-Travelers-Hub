@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions, joinMission } from '../redux/missions/missionsSlice';
+import {
+  getMissions,
+  joinMission,
+  leaveMission,
+} from '../redux/missions/missionsSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -10,6 +14,11 @@ const Mission = () => {
   const handleJoinMission = (id) => {
     dispatch(joinMission(id));
   };
+
+  const handleLeaveMission = (id) => {
+    dispatch(leaveMission(id));
+  };
+
   useEffect(() => {
     dispatch(getMissions());
   }, [dispatch]);
@@ -36,17 +45,27 @@ const Mission = () => {
                 </button>
               </td>
               <td className="p-1 w-10 wrap">
-                <button
-                  type="button"
-                  className={
-                    !mission.reserved
-                      ? 'btn-join-mission ptr'
-                      : 'btn-leave-mission ptr'
-                  }
-                  onClick={() => handleJoinMission({ id: mission.mission_id })}
-                >
-                  <p>{!mission.reserved ? 'Join Mission' : 'Leave Mission'}</p>
-                </button>
+                {mission.reserved ? (
+                  <>
+                    <button
+                      type="button"
+                      className="btn-leave-mission ptr"
+                      onClick={() => handleLeaveMission({ id: mission.mission_id })}
+                    >
+                      <p>Leave Mission</p>
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className="btn-join-mission ptr"
+                      onClick={() => handleJoinMission({ id: mission.mission_id })}
+                    >
+                      <p>Join Mission</p>
+                    </button>
+                  </>
+                )}
               </td>
             </tr>
           </div>
