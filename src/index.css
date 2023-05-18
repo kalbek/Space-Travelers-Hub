@@ -89,12 +89,3 @@ nav .menus {
   gap: 25px;
   margin: 10px 10px;
 }
-
-.card {
-  display: flex;
-  align-items: center;
-}
-
-.options {
-  width: 70%;
-}
