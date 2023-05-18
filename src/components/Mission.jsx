@@ -40,9 +40,19 @@ const Mission = () => {
               <td className="p-1 w-10 wrap">{mission.mission_name}</td>
               <td className="p-1 w-70 wrap">{mission.description}</td>
               <td className="p-1 w-10 wrap">
-                <button type="button" className="btn-not-member ptr">
-                  <p>NOT A MEMBER</p>
-                </button>
+                {mission.reserved ? (
+                  <>
+                    <button type="button" className="btn-active-member ptr">
+                      <p>Active Member</p>
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button type="button" className="btn-not-member ptr">
+                      <p>NOT A MEMBER</p>
+                    </button>
+                  </>
+                )}
               </td>
               <td className="p-1 w-10 wrap">
                 {mission.reserved ? (
