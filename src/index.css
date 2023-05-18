@@ -2,8 +2,17 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,7 +21,12 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Courier New",
     monospace;
 }
 
@@ -73,21 +87,6 @@ nav .menus {
 
 .blues {
   text-decoration: none;
-}
-
-.missions {
-  display: flex;
-}
-
-.missionsHead,
-.missionsIndex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  gap: 25px;
-  margin: 10px 10px;
 }
 
 /* table styles */
@@ -198,3 +197,30 @@ table td {
 }
 
 /* end of table styles */
+
+/* display rocket style start here */
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.options {
+  width: 70%;
+  margin: 5% auto;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.reserved {
+  border: none;
+  color: white;
+  background-color: rgb(86, 86, 244);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* display rocket style ands here */
