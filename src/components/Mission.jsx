@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions } from '../redux/missions/missionsSlice';
+import { getMissions, joinMission } from '../redux/missions/missionsSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
   const { missions } = useSelector((store) => store.missions);
 
+  const handleJoinMission = (id) => {
+    dispatch(joinMission(id));
+  };
   useEffect(() => {
     dispatch(getMissions());
   }, [dispatch]);
@@ -33,7 +36,15 @@ const Mission = () => {
                 </button>
               </td>
               <td className="p-1 w-10 wrap">
-                <button type="button" className="btn-join-mission ptr">
+                <button
+                  type="button"
+                  className={
+                    !mission.reserved
+                      ? 'btn-join-mission ptr'
+                      : 'btn-leave-mission ptr'
+                  }
+                  onClick={() => handleJoinMission({ id: mission.mission_id })}
+                >
                   <p>{!mission.reserved ? 'Join Mission' : 'Leave Mission'}</p>
                 </button>
               </td>
