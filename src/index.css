@@ -103,3 +103,112 @@ nav .menus {
   gap: 25px;
   margin: 10px 10px;
 }
+
+/* table styles */
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-40 {
+  width: 40vw;
+}
+
+.profile p {
+  font-size: 22px;
+}
+
+.title-profile {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-5px {
+  padding: 5px;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+table {
+  padding: 1rem 3rem;
+}
+
+table tr,
+table td {
+  outline: 1px solid #dee2e6;
+}
+
+.btn-not-member {
+  position: absolute;
+  height: 25px;
+  width: 9%;
+  margin-left: -10px;
+  top: 50%;
+  border-radius: 5px;
+  border: 1px solid #6d757d;
+  background-color: #6d757d;
+}
+
+.btn-active-member {
+  position: absolute;
+  height: 25px;
+  width: 9%;
+  margin-left: -10px;
+  top: 50%;
+  border-radius: 5px;
+  border: 1px solid #18a2b8;
+  background-color: #18a2b8;
+}
+
+.btn-join-mission {
+  position: absolute;
+  height: 33px;
+  width: auto;
+  margin-left: 10px;
+  padding: 0 0.5rem;
+  top: 45%;
+  border-radius: 2px;
+  border: 2px solid #6d757d;
+  background: transparent;
+}
+
+.btn-leave-mission {
+  position: absolute;
+  height: 33px;
+  width: auto;
+  padding: 0 0.5rem;
+  top: 47%;
+  border-radius: 2px;
+  border: 2px solid #df4856;
+  background: transparent;
+}
+
+.btn-leave-mission * {
+  color: #df4856;
+}
+
+.btn-not-member *,
+.btn-active-member * {
+  color: #fff;
+}
+
+.relative {
+  position: relative;
+}
+
+/* end of table styles */
