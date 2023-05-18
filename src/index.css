@@ -89,21 +89,6 @@ nav .menus {
   text-decoration: none;
 }
 
-.missions {
-  display: flex;
-}
-
-.missionsHead,
-.missionsIndex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  gap: 25px;
-  margin: 10px 10px;
-}
-
 /* table styles */
 .flex-start {
   display: flex;
@@ -212,3 +197,30 @@ table td {
 }
 
 /* end of table styles */
+
+/* display rocket style start here */
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.options {
+  width: 70%;
+  margin: 5% auto;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.reserved {
+  border: none;
+  color: white;
+  background-color: rgb(86, 86, 244);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* display rocket style ands here */
