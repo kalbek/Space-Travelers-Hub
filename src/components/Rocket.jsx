@@ -14,8 +14,14 @@ const Rocket = ({
       </div>
       <div className="options">
         <h3 className="name">{name}</h3>
-        <h4>{reserved ? 'reserved' : ''}</h4>
-        <p className="description">{description}</p>
+        <div className="block">
+          <div>
+            <span>{reserved ? 'reserved' : ''}</span>
+          </div>
+          <div>
+            <p className="description">{description}</p>
+          </div>
+        </div>
         <button
           type="button"
           className={reserved ? 'reserved unbook' : 'reserved book'}
@@ -46,5 +52,5 @@ Rocket.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  reserved: PropTypes.string,
+  reserved: PropTypes.bool,
 };
