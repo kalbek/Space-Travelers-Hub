@@ -1,11 +1,9 @@
-import React from 'react';
-import Mission from '../components/Mission';
+import React from "react";
+import Mission from "../components/Mission";
 
 const Missions = () => (
   <>
-    <div className="flex-ccc">
-      <Mission />
-    </div>
+    <Mission />
   </>
 );
 

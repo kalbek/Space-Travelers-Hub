@@ -1,12 +1,29 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 const MyProfile = () => {
+  const [reservedMissions, setReservedMissions] = useState(0);
+  const [reservdsRockets, setReservedRockets] = useState(0);
+
   const { missions } = useSelector((store) => store.missions);
   const { rocketList } = useSelector((store) => store.rockets);
+
+  useEffect(() => {
+    missions.forEach((mission) => {
+      if (mission.reserved) {
+        setReservedMissions((count) => count + 1);
+      }
+    });
+    rocketList.forEach((mission) => {
+      if (mission.reserved) {
+        setReservedRockets((count) => count + 1);
+      }
+    });
+  }, []);
   return (
     <>
-      <div className="flex-centered">
+      <div className="flex-centered pro">
         <table>
           <thead>
             <tr className="flex-start p-1">
@@ -14,37 +31,53 @@ const MyProfile = () => {
             </tr>
           </thead>
           <tbody>
-            {missions
-              .filter((mission) => mission.reserved)
-              .map((mission) => (
-                <React.Fragment key={mission.mission_id}>
-                  <tr className="flex relative">
-                    <td className="p-1 w-40 wrap profile">
-                      <p>{mission.mission_name}</p>
-                    </td>
-                  </tr>
-                </React.Fragment>
-              ))}
+            {reservedMissions === 0 ? (
+              <tr className="flex relative">
+                <td className="p-1 w-40 wrap profile">
+                  <p>No joined missions.</p>
+                </td>
+              </tr>
+            ) : (
+              missions
+                .filter((mission) => mission.reserved)
+                .map((mission) => (
+                  <React.Fragment key={mission.mission_id}>
+                    <tr className="flex relative">
+                      <td className="p-1 w-40 wrap profile">
+                        <p>{mission.mission_name}</p>
+                      </td>
+                    </tr>
+                  </React.Fragment>
+                ))
+            )}
           </tbody>
         </table>
         <table>
           <thead>
-            <tr>
+            <tr className="flex-start p-1">
               <th className="title-profile flex-start">My Rockets</th>
             </tr>
           </thead>
           <tbody>
-            {rocketList
-              .filter((rocket) => rocket.reserved)
-              .map((rocket) => (
-                <React.Fragment key={rocket.id}>
-                  <tr className="flex relative">
-                    <td className="p-1 w-40 wrap profile">
-                      <p>{rocket.name}</p>
-                    </td>
-                  </tr>
-                </React.Fragment>
-              ))}
+            {reservdsRockets === 0 ? (
+              <tr className="flex relative">
+                <td className="p-1 w-40 wrap profile">
+                  <p>No reserved rockets.</p>
+                </td>
+              </tr>
+            ) : (
+              rocketList
+                .filter((rocket) => rocket.reserved)
+                .map((rocket) => (
+                  <React.Fragment key={rocket.id}>
+                    <tr className="flex relative">
+                      <td className="p-1 w-40 wrap profile">
+                        <p>{rocket.name}</p>
+                      </td>
+                    </tr>
+                  </React.Fragment>
+                ))
+            )}
           </tbody>
         </table>
       </div>
