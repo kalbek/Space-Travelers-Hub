@@ -3,14 +3,17 @@ import axios from 'axios';
 
 const url = 'https://api.spacexdata.com/v3/rockets';
 
-export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
-  try {
-    const response = await axios.get(url);
-    return response.data;
-  } catch (error) {
-    return error.message;
-  }
-});
+export const fetchRockets = createAsyncThunk(
+  'rockets/fetchRockets',
+  async () => {
+    try {
+      const response = await axios.get(url);
+      return response.data;
+    } catch (error) {
+      return error.message;
+    }
+  },
+);
 
 const initialState = {
   rocketList: [],
@@ -70,5 +73,5 @@ export const rocketsSlice = createSlice({
   },
 });
 
-export default rocketsSlice.reducer;
 export const { bookRocket, leaveRocket } = rocketsSlice.actions;
+export default rocketsSlice.reducer;

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component renders Navigation component 1`] = `
+<div>
+  <nav>
+    <div
+      class="nav-container"
+    >
+      <div>
+        <div
+          class="flex"
+        >
+          <div
+            class="logo"
+          >
+            Logo
+          </div>
+          <div
+            class="title"
+          >
+            Space Travellers' Hub
+          </div>
+        </div>
+        <div
+          class="menus flex gap1"
+        >
+          <a
+            activeclassname="selected"
+            class=""
+            href="/rockets"
+            style="text-decoration: none;"
+          >
+            <div
+              class="menu ptr"
+            >
+              Rockets
+            </div>
+          </a>
+          <a
+            activeclassname="selected"
+            class=""
+            href="/missions"
+            style="text-decoration: none;"
+          >
+            <div
+              class="menu ptr"
+            >
+              Missions
+            </div>
+          </a>
+          |
+          <a
+            activeclassname="selected"
+            class=""
+            href="/profile"
+            style="text-decoration: none;"
+          >
+            <div
+              class="menu ptr"
+            >
+              My Profile
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;

@@ -1,18 +1,18 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
   missions: [],
-  error: '',
+  error: "",
 };
 
-export const getMissions = createAsyncThunk('missions', async () => {
-  const response = await axios('https://api.spacexdata.com/v3/missions');
+export const getMissions = createAsyncThunk("missions", async () => {
+  const response = await axios("https://api.spacexdata.com/v3/missions");
   return response.data;
 });
 
 const missionsSlice = createSlice({
-  name: 'rockets',
+  name: "missions",
   initialState,
   reducers: {
     joinMission: (state, action) => {
@@ -22,16 +22,14 @@ const missionsSlice = createSlice({
         }
         return { ...mission, reserved: true };
       });
-      state.missions = newState;
+      return { ...state, missions: newState };
     },
     leaveMission: (state, action) => {
-      const newState = state.missions.map((mission) => {
-        if (mission.mission_id !== action.payload.id) {
-          return mission;
-        }
-        return { ...mission, reserved: false };
-      });
-      state.missions = newState;
+      const { id } = action.payload;
+      const newMissions = state.missions.filter(
+        (mission) => mission.mission_id !== id
+      );
+      return { ...state, missions: newMissions };
     },
   },
 
@@ -44,7 +42,7 @@ const missionsSlice = createSlice({
       if (state.missions.length === 0) state.missions = action.payload;
     });
     builder.addCase(getMissions.rejected, (state) => {
-      state.error = 'Something went wrong';
+      state.error = "Something went wrong";
       state.isLoading = false;
     });
   },
