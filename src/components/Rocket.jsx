@@ -8,7 +8,7 @@ const Rocket = ({
 }) => {
   const dispatch = useDispatch();
   return (
-    <div className="card">
+    <div className="card roc">
       <div>
         <img src={image} className="image" alt="rocket" />
       </div>

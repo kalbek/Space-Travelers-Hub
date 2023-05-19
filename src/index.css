@@ -51,7 +51,7 @@ code {
 
 nav {
   display: flex;
-  width: 95vw;
+  width: 100vw;
   padding: 1rem 7% 1rem 10%;
   border-bottom: 2px solid #dadddd;
 }
@@ -88,6 +88,7 @@ nav .menus {
 
 .selected {
   text-decoration: underline !important;
+  text-decoration-color: red;
 }
 
 .blues {
@@ -134,8 +135,13 @@ nav .menus {
   flex-wrap: wrap;
 }
 
-table {
-  padding: 1rem 3rem;
+.missions-table {
+  width: 90vw;
+
+  /* height: 70vh; */
+
+  /* height: 1000rem; */
+  margin-top: 1rem;
 }
 
 table tr,
