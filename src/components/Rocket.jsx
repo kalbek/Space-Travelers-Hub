@@ -16,7 +16,7 @@ const Rocket = ({
         <h3 className="name">{name}</h3>
         <div className="block">
           <div>
-            <span>{reserved ? 'reserved' : ''}</span>
+            <span>{reserved ? 'Reserved' : ''}</span>
           </div>
           <div>
             <p className="description">{description}</p>
@@ -35,7 +35,7 @@ const Rocket = ({
               }
           }
         >
-          {reserved ? 'Unbook Rocket' : 'Book Rocket'}
+          {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
         </button>
       </div>
     </div>
