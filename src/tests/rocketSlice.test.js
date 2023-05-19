@@ -1,11 +1,11 @@
 import rocketsReducer, {
   bookRocket,
   leaveRocket,
-} from "../redux/rockets/rocketsSlice";
+} from '../redux/rockets/rocketsSlice';
 
-describe("rocketsSlice", () => {
-  describe("reducer", () => {
-    it("should handle bookRocket", () => {
+describe('rocketsSlice', () => {
+  describe('reducer', () => {
+    it('should handle bookRocket', () => {
       const initialState = {
         rocketList: [
           { id: 1, reserved: false },
@@ -22,7 +22,7 @@ describe("rocketsSlice", () => {
       expect(rocketsReducer(initialState, action)).toEqual(expectedState);
     });
 
-    it("should handle leaveRocket", () => {
+    it('should handle leaveRocket', () => {
       const initialState = {
         rocketList: [
           { id: 1, reserved: true },
