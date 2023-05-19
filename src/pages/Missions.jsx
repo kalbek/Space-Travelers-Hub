@@ -1,5 +1,5 @@
-import React from "react";
-import Mission from "../components/Mission";
+import React from 'react';
+import Mission from '../components/Mission';
 
 const Missions = () => (
   <>

@@ -1,6 +1,5 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const MyProfile = () => {
   const [reservedMissions, setReservedMissions] = useState(0);
@@ -20,7 +19,7 @@ const MyProfile = () => {
         setReservedRockets((count) => count + 1);
       }
     });
-  }, []);
+  }, [rocketList, missions]);
   return (
     <>
       <div className="flex-centered pro">
