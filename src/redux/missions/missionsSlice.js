@@ -12,7 +12,7 @@ export const getMissions = createAsyncThunk('missions', async () => {
 });
 
 const missionsSlice = createSlice({
-  name: 'rockets',
+  name: 'missions',
   initialState,
   reducers: {
     joinMission: (state, action) => {
@@ -22,16 +22,14 @@ const missionsSlice = createSlice({
         }
         return { ...mission, reserved: true };
       });
-      state.missions = newState;
+      return { ...state, missions: newState };
     },
     leaveMission: (state, action) => {
-      const newState = state.missions.map((mission) => {
-        if (mission.mission_id !== action.payload.id) {
-          return mission;
-        }
-        return { ...mission, reserved: false };
-      });
-      state.missions = newState;
+      const { id } = action.payload;
+      const newMissions = state.missions.filter(
+        (mission) => mission.mission_id !== id,
+      );
+      return { ...state, missions: newMissions };
     },
   },
 
