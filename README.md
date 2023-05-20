@@ -40,7 +40,7 @@
 </details>
 
 ### Tech Stack <a name="live-demo"></a>
-[checkout the live demo here](https://space-travellers-6soy.onrender.com/rockets)
+[checkout the live demo here](https://space-travellers-6soy.onrender.com)
 
 ### Key Features <a name="key-features"></a>
 
