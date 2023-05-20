@@ -39,6 +39,9 @@
   </ul>
 </details>
 
+### Tech Stack <a name="live-demo"></a>
+[checkout the live demo here](https://space-travellers-6soy.onrender.com/rockets)
+
 ### Key Features <a name="key-features"></a>
 
 - **Project setup with React and Linters**
