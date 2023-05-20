@@ -1,5 +1,6 @@
 <a name="readme-top"></a>
 # 📗 Table of Contents
+![space-travellers](https://github.com/kalbek/react-group-project/assets/44664009/8d9ffeb3-7384-4959-819c-423436f2284b)
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
