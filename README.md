@@ -39,7 +39,7 @@
   </ul>
 </details>
 
-### Tech Stack <a name="live-demo"></a>
+### Live Preview <a name="live-demo"></a>
 [checkout the live demo here](https://space-travellers-6soy.onrender.com)
 
 ### Key Features <a name="key-features"></a>
