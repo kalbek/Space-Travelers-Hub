@@ -60,13 +60,13 @@ Try to have these in your local machine
 In order to run this project you need
 
 - A web browser
-- Code editor
+- Code Editor
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-git clone https://github.com/kalbek/react-group-project
+```git clone https://github.com/kalbek/Space-Travelers-Hub.git```
 
 ### Install
 
@@ -75,13 +75,13 @@ Install this project using the cloned repo or download and use the files to your
 ### Usage
 
 - Clone the repository first
-- Commnads to Run:
-  - npm install
-  - npm start
+- Commands to Run:
+  - ```npm install```
+  - ```npm start```
 
 ### Run tests
 
-- tests are included using Jest framework
+- tests are included using the Jest framework
 - commands to run: npm test
 
 ### Deployment
@@ -98,7 +98,7 @@ You can deploy this project through Github Pages
 
 - GitHub: [@githubhandle](https://github.com/kalbek)
 - Twitter: [@twitterhandle](https://twitter.com/KNuramo)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kaleb-nuramo/)
+- LinkedIn [LinkedIn](https://www.linkedin.com/in/kaleb-nuramo/)
 - Website: https://kalbek.github.io/Portfolio/
 
 👤 **Gladwin Tshepo Ramantso**
