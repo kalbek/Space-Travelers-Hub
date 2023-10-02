@@ -31,9 +31,9 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
+  <summary>Click to see the tech stacks used on the project.</summary>
   <ul>
-    <li><a href="https://react.dev">REACT.js</a></li>
+    <li><a href="https://react.dev">React</a></li>
     <li><a href="https://reactrouter.com/en/main">React Router</a></li>
     <li><a href="https://redux.js.org">Redux</a></li>
     <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
